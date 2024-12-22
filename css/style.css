@@ -1,0 +1,103 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(45deg, #4CAF50, #FF5722, #2196F3);
+    background-size: 200% 200%;
+    animation: gradientAnimation 10s infinite ease-in-out;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.svg-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.animated-svg-part {
+    width: 150px;
+    height: auto;
+}
+
+.animated-svg-part:nth-child(1) {
+    animation: rotateAnimation 6s infinite ease-in-out;
+}
+
+@keyframes rotateAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.animated-svg-part:nth-child(2) {
+    animation: scaleAnimation 4s infinite alternate;
+}
+
+@keyframes scaleAnimation {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.2);
+    }
+}
+
+.animated-svg-part:nth-child(3) {
+    animation: fadeInOutAnimation 5s infinite ease-in-out;
+}
+
+@keyframes fadeInOutAnimation {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.animated-svg-part:nth-child(4) {
+    animation: bounceAnimation 3s infinite ease-in-out;
+}
+
+@keyframes bounceAnimation {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.animated-svg-part:nth-child(5) {
+    animation: moveLeftRightAnimation 6s infinite ease-in-out;
+}
+
+@keyframes moveLeftRightAnimation {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(20px);
+    }
+}
